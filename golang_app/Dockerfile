@@ -1,3 +1,3 @@
 FROM scratch
-ADD main /
-CMD ["/main"]
+ADD golang_app /
+CMD ["/golang_app"]
