@@ -5,8 +5,9 @@ get '/' do
 end
 
 post '/email' do
-  @email =  params[:email]
-  puts @email.to_s
+  email =  params[:email]
+  AwsQueue.new.send(email)
+  puts email.to_s
   redirect "/"
 end
 
